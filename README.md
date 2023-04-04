@@ -1,1 +1,0 @@
-Light Weight General Purpose IoT System (Node.js)
