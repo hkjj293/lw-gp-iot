@@ -1,21 +1,42 @@
-<mxfile host="app.diagrams.net" modified="2023-04-06T09:53:24.066Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="NA32mNAJpizIUXavWtxz" version="21.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-06T10:02:11.794Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="_WnH4c5v0-lInE7OyZsU" version="21.1.4" type="github">
   <diagram name="Page-1" id="ga8h144KBCxEZ6d47N7E">
     <mxGraphModel dx="1221" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="VERnoS--WV3S1yRSneif-26" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="290" y="320" width="230" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-26" source="VERnoS--WV3S1yRSneif-1" target="VERnoS--WV3S1yRSneif-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-30" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-26" source="VERnoS--WV3S1yRSneif-1" target="VERnoS--WV3S1yRSneif-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-1" value="Core" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;container=0;" vertex="1" parent="VERnoS--WV3S1yRSneif-26">
+          <mxGeometry y="-5" width="230" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-29" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-26" source="VERnoS--WV3S1yRSneif-25" target="VERnoS--WV3S1yRSneif-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-25" value="Scheduler" style="whiteSpace=wrap;html=1;aspect=fixed;container=0;" vertex="1" parent="VERnoS--WV3S1yRSneif-26">
+          <mxGeometry x="20" y="40" width="90" height="90" as="geometry">
+            <mxRectangle x="300" y="380" width="90" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-31" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-26" source="VERnoS--WV3S1yRSneif-1" target="VERnoS--WV3S1yRSneif-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="VERnoS--WV3S1yRSneif-16" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VERnoS--WV3S1yRSneif-19" target="VERnoS--WV3S1yRSneif-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VERnoS--WV3S1yRSneif-20" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VERnoS--WV3S1yRSneif-1" target="VERnoS--WV3S1yRSneif-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VERnoS--WV3S1yRSneif-1" value="Core" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="290" y="340" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="VERnoS--WV3S1yRSneif-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VERnoS--WV3S1yRSneif-18" target="VERnoS--WV3S1yRSneif-1">
+        <mxCell id="VERnoS--WV3S1yRSneif-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VERnoS--WV3S1yRSneif-18" target="VERnoS--WV3S1yRSneif-1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="240" y="310" as="sourcePoint" />
+            <mxPoint x="310" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="VERnoS--WV3S1yRSneif-13" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VERnoS--WV3S1yRSneif-11" target="VERnoS--WV3S1yRSneif-18">
@@ -23,17 +44,26 @@
             <mxPoint x="190" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VERnoS--WV3S1yRSneif-11" target="VERnoS--WV3S1yRSneif-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="VERnoS--WV3S1yRSneif-11" value="Device A" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="50" y="160" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="VERnoS--WV3S1yRSneif-14" value="Device B" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="50" y="530" width="80" height="80" as="geometry" />
+          <mxGeometry x="50" y="620" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="VERnoS--WV3S1yRSneif-18" value="Task" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+        <mxCell id="VERnoS--WV3S1yRSneif-18" value="Active Task A" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
           <mxGeometry x="180" y="260" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="VERnoS--WV3S1yRSneif-19" value="Task" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="440" width="80" height="40" as="geometry" />
+        <mxCell id="VERnoS--WV3S1yRSneif-19" value="Active Task A" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="565" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-24" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VERnoS--WV3S1yRSneif-22" target="VERnoS--WV3S1yRSneif-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VERnoS--WV3S1yRSneif-22" value="Passive Task B" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
