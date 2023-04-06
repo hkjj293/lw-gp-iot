@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-06T10:40:19.457Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="ycIgW5pAj3HeQgkQSbh1" version="21.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-06T15:32:36.013Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="ScTwJkZVJkHDnhKt4ZU5" version="21.1.4" type="github">
   <diagram name="Page-1" id="ga8h144KBCxEZ6d47N7E">
     <mxGraphModel dx="1221" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -56,7 +56,7 @@
         <mxCell id="VERnoS--WV3S1yRSneif-48" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-34" source="VERnoS--WV3S1yRSneif-32" target="VERnoS--WV3S1yRSneif-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VERnoS--WV3S1yRSneif-32" value="Polling machine" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="VERnoS--WV3S1yRSneif-34">
+        <mxCell id="VERnoS--WV3S1yRSneif-32" value="Polling system" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="VERnoS--WV3S1yRSneif-34">
           <mxGeometry x="130" y="25" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="VERnoS--WV3S1yRSneif-27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-34" source="VERnoS--WV3S1yRSneif-1" target="VERnoS--WV3S1yRSneif-25">
