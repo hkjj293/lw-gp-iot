@@ -22,6 +22,10 @@ export class Device {
         return this.id;
     }
 
+    protected SetId(id: string): void {
+        this.id = id;
+    }
+
     public GetName(): string {
         return this.name;
     }

@@ -4,14 +4,17 @@ exports.Device = void 0;
 const uuid_1 = require("uuid");
 class Device {
     constructor(props) {
-        this.name = props.name || ("Device" + (Device.dCount++).toString());
-        this.id = props.id || (0, uuid_1.v4)();
+        this.name = (props && props.name) || ("Device" + (Device.dCount++).toString());
+        this.id = (props && props.id) || (0, uuid_1.v4)();
     }
     Run(command) {
         console.log(command);
     }
     GetId() {
         return this.id;
+    }
+    SetId(id) {
+        this.id = id;
     }
     GetName() {
         return this.name;

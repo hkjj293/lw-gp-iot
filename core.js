@@ -19,11 +19,24 @@ class Core {
             in_running: 0,
         };
     }
-    addDevice(uuid, device) {
-        this.system_states.devices[uuid] = device;
+    addDevice(device) {
+        this.system_states.devices[device.GetId()] = device;
     }
-    getDevice(uuid) {
+    removeDeviceById(uuid) {
+        return delete this.system_states.devices[uuid];
+    }
+    getDeviceById(uuid) {
         return this.system_states.devices[uuid];
+    }
+    getAllDevices() {
+        return this.system_states.devices;
+    }
+    addTask(task) {
+        this.system_states.taskQueue.push(task);
+        console.log(this.system_states.taskQueue.length);
+    }
+    getOperatingStatus() {
+        return this.system_states.operating_status;
     }
     Run() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -33,10 +46,19 @@ class Core {
             this.system_states.in_running += 1;
             this.system_states.operating_status = "running";
             while (this.system_states.taskQueue.length > 0) {
+                console.log(this.system_states.taskQueue.length + '>0');
                 try {
                     const task = this.system_states.taskQueue.shift();
-                    if (task)
+                    if (task) {
+                        console.log(JSON.stringify(task));
+                        for (const d in this.system_states.devices) {
+                            console.log(d);
+                        }
+                    }
+                    if (task && this.system_states.devices[task.deviceId]) {
+                        console.log('run task ' + task.command);
                         this.system_states.devices[task.deviceId].Run(task.command);
+                    }
                 }
                 catch (e) {
                     console.log(e.message);
