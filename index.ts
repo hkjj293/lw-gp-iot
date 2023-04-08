@@ -52,10 +52,11 @@ async function schedule(core: Core) {
             });
     });
     // PLease refer to https://sunrise-sunset.org/api
-    const sunset = new Date(Date.parse(ss.results.sunset) - 1000 * 60 * 30);
+    const sunset = new Date(Date.parse(ss.results.sunset) + 1000 * 60 * (-30 - d.getTimezoneOffset()));
+    const dd = new Date(Date.now() - 1000 * 60 * d.getTimezoneOffset());
     console.log(sunset);
     console.log(d);
-    if (!nightLight && d.getTime() > sunset.getTime()) {
+    if (!nightLight && dd.getTime() > sunset.getTime()) {
         console.log('add time');
         core.addTask({
             id: '2209059936342954060248e1e9a51e71',
