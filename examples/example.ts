@@ -38,6 +38,7 @@ async function main() {
     setImmediate(() => { core.run() })
     setImmediate(() => { schedule(core) })
     console.log('Running Async Core')
+    // core.on('term',()=>{serviceRegistry.close()})
     // meross.close();
 }
 
@@ -81,21 +82,26 @@ async function schedule(core: Core) {
     // } else if (dd.getSeconds() < 30 && trigger) {
     //     trigger = false;
     // }
+    // core.addTask({
+    //     id: uuidv4().replace('-', ''),
+    //     deviceId: core.getId(),
+    //     command: 'cp;' + (40 * dd.getSeconds()).toString()
+    // })
+    // core.addTask({
+    //     id: uuidv4().replace('-', ''),
+    //     deviceId: core.getId(),
+    //     command: 'echo;NewCycle'
+    // })
     core.addTask({
         id: uuidv4().replace('-', ''),
         deviceId: core.getId(),
-        command: 'cp;' + (40 * dd.getSeconds()).toString()
+        command: 'now'
     })
-    core.addTask({
-        id: uuidv4().replace('-', ''),
-        deviceId: core.getId(),
-        command: 'echo;NewCycle'
-    })
-    core.addTask({
-        id: uuidv4().replace('-', ''),
-        deviceId: core.getId(),
-        command: 'term;3000'
-    })
+    // core.addTask({
+    //     id: uuidv4().replace('-', ''),
+    //     deviceId: core.getId(),
+    //     command: 'term;3000'
+    // })
     if (core.getOperatingStatus() == 'running') {
         if (core.getCyclePeriod() == 0) {
             setImmediate(() => { schedule(core) })
