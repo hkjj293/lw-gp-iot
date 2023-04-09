@@ -5,7 +5,7 @@ const uuid_1 = require("uuid");
 class Device {
     constructor(props) {
         this.name = (props && props.name) || ("Device" + (Device.dCount++).toString());
-        this.id = (props && props.id) || (0, uuid_1.v4)();
+        this.id = (props && props.id) || (0, uuid_1.v4)().replace('-', '');
     }
     Run(command) {
         console.log(command);

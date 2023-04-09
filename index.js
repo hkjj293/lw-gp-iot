@@ -18,17 +18,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 require("fs/promises");
-const core_1 = require("./core");
+const Core_1 = require("./Core");
 const MerossService_1 = __importDefault(require("./Services/Meross/MerossService"));
 const https_1 = __importDefault(require("https"));
+const uuid_1 = require("uuid");
 var nightLight = false;
+var toggle = false;
+var trigger = false;
 /* The idea is subscibe a service and get device from service.
 A service means a 3rd party api that can used to fetch devices, read devices and control devices.
 The core system should be logically isolated from device & service registry*/
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const verbose = process.argv.includes('--verbose') || process.argv.includes('-v');
-        const core = new core_1.Core();
+        const core = new Core_1.Core();
         const meross = new MerossService_1.default();
         // "meross": "MerossService" => in services.json => e.g. Core.addService('meross');
         // in ./{service_name}/ folder, there will be service files
@@ -39,7 +42,7 @@ function main() {
             core.addDevice(devices[d]);
         }
         console.log('Done Init: ' + JSON.stringify(obj) + '\n');
-        setImmediate(() => { core.Run(); });
+        setImmediate(() => { core.run(); });
         console.log('Running Async Core');
         setImmediate(() => { schedule(core); });
     });
@@ -61,17 +64,35 @@ function schedule(core) {
             });
         });
         // PLease refer to https://sunrise-sunset.org/api
-        const sunset = new Date(Date.parse(ss.results.sunset) - 1000 * 60 * 30);
-        console.log(sunset);
-        console.log(d);
-        if (!nightLight && d.getTime() > sunset.getTime()) {
+        const sunset = new Date(Date.parse(ss.results.sunset) + 1000 * 60 * (-30 - d.getTimezoneOffset()));
+        const dd = new Date(Date.now() - 1000 * 60 * d.getTimezoneOffset());
+        if (!nightLight && dd.getTime() > sunset.getTime()) {
             console.log('add time');
             core.addTask({
-                id: '2209059936342954060248e1e9a51e71',
+                id: (0, uuid_1.v4)().replace('-', ''),
                 deviceId: '2209059936342954060248e1e9a51e71',
                 command: 't;3;t'
             });
             nightLight = true;
+        }
+        // if (dd.getSeconds() >= 30 && !trigger) {
+        //     trigger = true;
+        //     core.addTask({
+        //         id: uuidv4().replace('-', ''),
+        //         deviceId: '2209059936342954060248e1e9a51e71',
+        //         command: 't;3;' + (toggle ? 't' : 'f')
+        //     });
+        //     toggle = !toggle;
+        // } else if (dd.getSeconds() < 30 && trigger) {
+        //     trigger = false;
+        // }
+        if (!trigger) {
+            trigger = true;
+            core.addTask({
+                id: (0, uuid_1.v4)().replace('-', ''),
+                deviceId: core.getId(),
+                command: 'cp;1000'
+            });
         }
         if (core.getOperatingStatus() == "running") {
             setImmediate(() => { schedule(core); });

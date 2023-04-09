@@ -12,7 +12,7 @@ export class Service {
     private name: string;
     constructor(props?: ServiceProps) {
         this.name = (props && props.name) || ("Service" + (Service.dCount++).toString());
-        this.id = (props && props.id) || uuidv4()
+        this.id = (props && props.id) || uuidv4().replace('-', '')
     }
 
     public GetAllDevices(): Device[] {

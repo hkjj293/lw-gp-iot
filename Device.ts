@@ -11,7 +11,7 @@ export class Device {
     private name: string;
     constructor(props?: DeviceProps) {
         this.name = (props && props.name) || ("Device" + (Device.dCount++).toString());
-        this.id = (props && props.id) || uuidv4()
+        this.id = (props && props.id) || uuidv4().replace('-', '')
     }
 
     public Run(command: string) {

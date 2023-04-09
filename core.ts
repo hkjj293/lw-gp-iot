@@ -1,5 +1,6 @@
 import { Device } from "./Device";
-import { Service } from "./Service";
+import { CoreCmd } from "./CoreCmd";
+import { v4 as uuidv4 } from 'uuid';
 
 // Active task->run immidiately when command sent to core,
 // Passive task->run when certain conditions satisfied
@@ -11,20 +12,29 @@ export type Task = {
 
 export class Core {
     private system_states: {
+        id: string,
         devices: { [uuid: string]: Device },
         taskQueue: Task[],
-        operating_status: string,
-        in_running: number,
-
+        operatingStatus: string,
+        cyclePeriod: number,
+        inRunning: number,
+        states: any
     };
 
     public constructor() {
         this.system_states = {
+            id: uuidv4().replace('-', ''),
             devices: {},
             taskQueue: [],
-            operating_status: "stopped",
-            in_running: 0,
+            operatingStatus: "stopped",
+            cyclePeriod: 0,
+            inRunning: 0,
+            states: {}
         }
+    }
+
+    public getId(): string {
+        return this.system_states.id;
     }
 
     public addDevice(device: Device): void {
@@ -45,34 +55,65 @@ export class Core {
 
     public addTask(task: Task): void {
         this.system_states.taskQueue.push(task);
-        console.log(this.system_states.taskQueue.length)
     }
 
     public getOperatingStatus(): string {
-        return this.system_states.operating_status;
+        return this.system_states.operatingStatus;
     }
 
-    public async Run(): Promise<void> {
-        if (this.system_states.in_running >= 1) {
+    public setOperatingStatus(opStatus: string): void {
+        this.system_states.operatingStatus = opStatus;
+    }
+
+    public getCyclePeriod(): number {
+        return this.system_states.cyclePeriod;
+    }
+
+    public setCyclePeriod(period: number): void {
+        this.system_states.cyclePeriod = period;
+    }
+    public getCoreStates(): any {
+        return this.system_states.states;
+    }
+
+    public async run(): Promise<void> {
+        console.log('new Cycle ' + new Date().toISOString());
+        if (this.system_states.inRunning >= 1) {
             return;
         }
-        this.system_states.in_running += 1;
-        this.system_states.operating_status = "running";
+        this.system_states.inRunning += 1;
+        this.system_states.operatingStatus = "running";
         while (this.system_states.taskQueue.length > 0) {
             try {
                 const task = this.system_states.taskQueue.shift();
                 if (task && this.system_states.devices[task.deviceId]) {
                     this.system_states.devices[task.deviceId].Run(task.command);
+                } else if (task && task.deviceId == this.system_states.id) {
+                    this.runCommand(task.command);
                 }
             } catch (e) {
                 console.log((e as Error).message);
             }
         }
-        if (this.system_states.operating_status == "running") {
-            setImmediate(() => {
-                this.system_states.in_running -= 1;
-                this.Run()
-            });
+        if (this.system_states.operatingStatus == "running") {
+            if (this.system_states.cyclePeriod == 0) {
+                setImmediate(() => {
+                    this.system_states.inRunning -= 1;
+                    this.run()
+                });
+            } else {
+                setTimeout(() => {
+                    this.system_states.inRunning -= 1;
+                    this.run()
+                }, this.system_states.cyclePeriod)
+            }
+        }
+    }
+
+    public async runCommand(command: string) {
+        const c: string[] = command.split(';');
+        if (c[0] && c[0].length > 0 && CoreCmd.fns[c[0]]) {
+            const res = CoreCmd.fns[c[0]](this, command);
         }
     }
 }

@@ -5,7 +5,7 @@ const uuid_1 = require("uuid");
 class Service {
     constructor(props) {
         this.name = (props && props.name) || ("Service" + (Service.dCount++).toString());
-        this.id = (props && props.id) || (0, uuid_1.v4)();
+        this.id = (props && props.id) || (0, uuid_1.v4)().replace('-', '');
     }
     GetAllDevices() {
         return [];
