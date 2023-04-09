@@ -6,8 +6,8 @@
 'use strict';
 import 'fs/promises'
 
-import { Core } from "./Kernel/Core";
-import MerossService from "./Services/Meross/MerossService";
+import { Core } from "../Kernel/Core";
+import MerossService from "../Services/Meross/MerossService";
 import https from 'https';
 
 import { v4 as uuidv4 } from 'uuid';
