@@ -47,17 +47,21 @@ async function schedule(core: Core) {
     const LONGITUDE = '-1.96'
     const d = new Date()
     const ss = await new Promise<any>((resolve) => {
-        https.get(
-            'https://api.sunrise-sunset.org/json?lat=' + LATITUDE + '&lng=' + LONGITUDE + '&formatted=0',
-            (res) => {
-                let body = ''
-                res.on('data', function (chunk) {
-                    body += chunk
+        try {
+            https.get(
+                'https://api.sunrise-sunset.org/json?lat=' + LATITUDE + '&lng=' + LONGITUDE + '&formatted=0',
+                (res) => {
+                    let body = ''
+                    res.on('data', function (chunk) {
+                        body += chunk
+                    })
+                    res.on('end', function () {
+                        resolve(JSON.parse(body))
+                    })
                 })
-                res.on('end', function () {
-                    resolve(JSON.parse(body))
-                })
-            })
+        } catch (e) {
+
+        }
     })
     // PLease refer to https://sunrise-sunset.org/api
     const sunset = new Date(Date.parse(ss.results.sunset) + 1000 * 60 * (-30 - d.getTimezoneOffset()))

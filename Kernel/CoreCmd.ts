@@ -57,7 +57,9 @@ function echo(core: Core, cmd: string) {
 
 function now(core: Core, cmd: string) {
     return new Promise((resolve) => {
-        console.log('date >> ' + (new Date()).toUTCString());
+        const d = new Date()
+        const dd = new Date(Date.now() - 1000 * 60 * d.getTimezoneOffset())
+        console.log('date >> ' + dd.toUTCString());
         resolve(true)
     })
 }
