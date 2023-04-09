@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-09T12:39:12.240Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="Bm5Cg6SjT8EfR1fhLwBy" version="21.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-09T12:40:37.399Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="FF9IjeUzLa4MGqFll7yA" version="21.1.5" type="github">
   <diagram name="Page-1" id="ga8h144KBCxEZ6d47N7E">
     <mxGraphModel dx="1619" dy="1095" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -75,21 +75,22 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="GNOxQv2WCz3E7T5rmqji-23" value="CoreCmd" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#FF0000;strokeWidth=2;" vertex="1" parent="VERnoS--WV3S1yRSneif-56">
-          <mxGeometry x="300" y="280" width="60" height="60" as="geometry" />
+          <mxGeometry x="220" y="110" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="GNOxQv2WCz3E7T5rmqji-24" value="Use" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-56" source="GNOxQv2WCz3E7T5rmqji-1" target="GNOxQv2WCz3E7T5rmqji-23">
-          <mxGeometry x="-1" relative="1" as="geometry">
+        <mxCell id="GNOxQv2WCz3E7T5rmqji-24" value="Use" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-56" source="GNOxQv2WCz3E7T5rmqji-23" target="GNOxQv2WCz3E7T5rmqji-1">
+          <mxGeometry x="-0.5556" y="20" relative="1" as="geometry">
             <mxPoint x="320" y="260" as="sourcePoint" />
-            <mxPoint x="480" y="260" as="targetPoint" />
+            <mxPoint x="-50" y="440" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GNOxQv2WCz3E7T5rmqji-25" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="GNOxQv2WCz3E7T5rmqji-24">
           <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="-20" y="40" as="offset" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GNOxQv2WCz3E7T5rmqji-26" value="Service Registry?" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="VERnoS--WV3S1yRSneif-56">
-          <mxGeometry x="300" y="42.5" width="65" height="65" as="geometry" />
+          <mxGeometry x="280" y="10" width="65" height="65" as="geometry" />
         </mxCell>
         <mxCell id="GNOxQv2WCz3E7T5rmqji-27" value="Manage" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-56" source="GNOxQv2WCz3E7T5rmqji-3" target="GNOxQv2WCz3E7T5rmqji-26">
           <mxGeometry relative="1" as="geometry">
