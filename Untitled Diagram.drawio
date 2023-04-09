@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-09T12:18:49.185Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="vxyM-7_TtkSVv9i6-zyT" version="21.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-09T12:33:08.443Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="mKNU7_ev2xoIFwqEcqzd" version="21.1.5" type="github">
   <diagram name="Page-1" id="ga8h144KBCxEZ6d47N7E">
     <mxGraphModel dx="1619" dy="1095" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -85,6 +85,25 @@
         </mxCell>
         <mxCell id="GNOxQv2WCz3E7T5rmqji-25" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="GNOxQv2WCz3E7T5rmqji-24">
           <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GNOxQv2WCz3E7T5rmqji-26" value="Service Registry?" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="VERnoS--WV3S1yRSneif-56">
+          <mxGeometry x="300" y="42.5" width="65" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="GNOxQv2WCz3E7T5rmqji-27" value="Manage" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="VERnoS--WV3S1yRSneif-56" source="GNOxQv2WCz3E7T5rmqji-3" target="GNOxQv2WCz3E7T5rmqji-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="190" as="sourcePoint" />
+            <mxPoint x="160" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GNOxQv2WCz3E7T5rmqji-28" value="0..n" style="edgeLabel;resizable=1;html=1;align=left;verticalAlign=top;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" connectable="0" vertex="1" parent="GNOxQv2WCz3E7T5rmqji-27">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="10" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GNOxQv2WCz3E7T5rmqji-29" value="1" style="edgeLabel;resizable=1;html=1;align=right;verticalAlign=top;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" connectable="0" vertex="1" parent="GNOxQv2WCz3E7T5rmqji-27">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-10" y="-28" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="GNOxQv2WCz3E7T5rmqji-22" value="Request" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="GNOxQv2WCz3E7T5rmqji-13">
           <mxGeometry width="60" relative="1" as="geometry">
