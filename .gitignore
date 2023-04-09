@@ -4,4 +4,4 @@ Kernel/*.js
 Modules/**/*.js
 Services/**/*.js
 *.js
-report.eslint.txt
+*.txt
