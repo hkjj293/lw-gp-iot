@@ -15,6 +15,14 @@ export class CoreCmd {
                 }
             }
             core.setCyclePeriod(p);
+        },
+        term: (core: Core, cmd: string) => {
+            const cmdFrag = cmd.split(';');
+            if (cmdFrag[1]) {
+                setTimeout(() => { core.setOperatingStatus('stop') }, parseInt(cmdFrag[1]));
+            } else {
+                core.setOperatingStatus('stop');
+            }
         }
     }
 }

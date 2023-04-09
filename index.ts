@@ -82,13 +82,18 @@ async function schedule(core: Core) {
     core.addTask({
         id: uuidv4().replace('-', ''),
         deviceId: core.getId(),
-        command: 'cp;' + (20 * dd.getSeconds()).toString()
+        command: 'cp;' + (40 * dd.getSeconds()).toString()
+    });
+    core.addTask({
+        id: uuidv4().replace('-', ''),
+        deviceId: core.getId(),
+        command: 'term'
     });
     if (core.getOperatingStatus() == "running") {
         if (core.getCyclePeriod() == 0) {
             setImmediate(() => { schedule(core) });
         } else {
-            setTimeout(() => { schedule(core) }, core.getCyclePeriod());
+            setTimeout(() => { schedule(core) }, core.getCyclePeriod() >> 1);
         }
     }
 }

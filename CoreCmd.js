@@ -16,6 +16,15 @@ CoreCmd.fns = {
             }
         }
         core.setCyclePeriod(p);
+    },
+    term: (core, cmd) => {
+        const cmdFrag = cmd.split(';');
+        if (cmdFrag[1]) {
+            setTimeout(() => { core.setOperatingStatus('stop'); }, parseInt(cmdFrag[1]));
+        }
+        else {
+            core.setOperatingStatus('stop');
+        }
     }
 };
 exports.CoreCmd = CoreCmd;
