@@ -25,6 +25,7 @@ const uuid_1 = require("uuid");
 var nightLight = false;
 var toggle = false;
 var trigger = false;
+var trig = false;
 /* The idea is subscibe a service and get device from service.
 A service means a 3rd party api that can used to fetch devices, read devices and control devices.
 The core system should be logically isolated from device & service registry*/
@@ -86,16 +87,18 @@ function schedule(core) {
         // } else if (dd.getSeconds() < 30 && trigger) {
         //     trigger = false;
         // }
-        if (!trigger) {
-            trigger = true;
-            core.addTask({
-                id: (0, uuid_1.v4)().replace('-', ''),
-                deviceId: core.getId(),
-                command: 'cp;1000'
-            });
-        }
+        core.addTask({
+            id: (0, uuid_1.v4)().replace('-', ''),
+            deviceId: core.getId(),
+            command: 'cp;' + (20 * dd.getSeconds()).toString()
+        });
         if (core.getOperatingStatus() == "running") {
-            setImmediate(() => { schedule(core); });
+            if (core.getCyclePeriod() == 0) {
+                setImmediate(() => { schedule(core); });
+            }
+            else {
+                setTimeout(() => { schedule(core); }, core.getCyclePeriod());
+            }
         }
     });
 }
