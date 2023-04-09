@@ -35,8 +35,9 @@ async function main() {
     }
     console.log('Done Init: ' + JSON.stringify(obj) + '\n')
     setImmediate(() => { core.run() });
-    console.log('Running Async Core');
     setImmediate(() => { schedule(core) });
+    console.log('Running Async Core');
+    //meross.close();
 }
 
 async function schedule(core: Core) {
