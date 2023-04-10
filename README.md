@@ -13,4 +13,4 @@ An adaptive light weight general purpose IoT system implemented in Node.js.
 
 
 ## License
-![alt text](https://github.com/hkjj293/lw-gp-iot/blob/main/LICINSE)
+https://github.com/hkjj293/lw-gp-iot/blob/main/LICINSE
