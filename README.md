@@ -1,7 +1,7 @@
 # lw-gp-iot
 An adaptive light weight general purpose IoT system implemented in Node.js.
 
-# Aim
+## Aim
 1. Light weight in terms of code size and development time
 2. Capability to adapt multiple protocols and brand specific systems
 3. Flexible development for different usecases
