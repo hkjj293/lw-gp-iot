@@ -1,0 +1,27 @@
+{
+  "name": "meross-smart-project-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsc && node ./dist/index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint --fix **/*.ts > ./report.eslint.txt"
+  },
+  "author": "hkjj293",
+  "license": "ISC",
+  "dependencies": {
+    "@types/uuid": "^9.0.1",
+    "meross-cloud": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.7",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.0.4"
+  }
+}
